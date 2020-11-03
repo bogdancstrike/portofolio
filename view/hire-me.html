@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<title>Hire me - Brand</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" />
+		<link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+		<link rel="stylesheet" href="assets/css/Footer-with-social-media-icons-1.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/Projects-Horizontal.css" />
+	</head>
+
+	<body>
+		<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+			<div class="container">
+				<a
+					class="navbar-brand logo"
+					data-bs-hover-animate="pulse"
+					href="index.html"
+					style="opacity: 1; font-family: 'Advent Pro', sans-serif"
+					>BogdanDoncea</a
+				><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav">
+					<span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="nav navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" data-bs-hover-animate="pulse" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-bs-hover-animate="pulse" href="cv.html">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" data-bs-hover-animate="pulse" href="hire-me.html"
+								>Hire me</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main class="page hire-me-page">
+			<section class="portfolio-block hire-me">
+				<div class="container" data-aos="zoom-in">
+					<div class="heading">
+						<h2>Hire Me</h2>
+					</div>
+					<form method="POST" action="/" enctype="application/json">
+						<div class="form-group">
+							<label for="subject">Subject</label>
+							<select class="form-control" id="subject" name="subject" required>
+								<option value="" selected="" disabled>Choose Subject</option>
+								<option value="Backend Application">Backend Application</option>
+								<option value="Frontend Application">Frontend Application</option>
+								<option value="Fullstack Application">Fullstack Application</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label
+							><input
+								class="form-control"
+								type="email"
+								id="email"
+								name="email"
+								required
+								placeholder="Enter your email"
+								pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="message">Message</label
+							><textarea
+								class="form-control"
+								id="message"
+								name="message"
+								placeholder="Enter your message"
+							></textarea>
+						</div>
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<label for="hire-date">Date</label
+									><input class="form-control" id="hire-date" type="date" name="date" required />
+								</div>
+								<div class="col-md-6 button">
+									<button class="btn btn-primary btn-block" type="submit" value="submit" required>
+										SEND
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="page-footer">
+			<div class="container">
+				<div class="links">
+					<a href="cv.html#education">Education</a><a href="cv.html#projects">Projects</a>
+				</div>
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/donceabogdan/"
+						><i class="icon ion-social-linkedin"></i></a
+					><a href="mailto:donceabogdan97@gmail.com"><i class="icon ion-social-google"></i></a
+					><a href="https://www.facebook.com/bogdancstrike/"
+						><i class="icon ion-social-facebook"></i
+					></a>
+				</div>
+			</div>
+		</footer>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/bs-init.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+		<script src="assets/js/theme.js"></script>
+	</body>
+</html>
