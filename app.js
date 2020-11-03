@@ -4,6 +4,7 @@ const morgan = require('morgan'); //logger for all requests
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const Model = require('./models/Hire');
+var nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -24,10 +25,39 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, 'view')));
 
-const indexView = fs.readFileSync(`${__dirname}/view/index.html`, 'utf-8');
-
 app.post('/', async (req, res) => {
 	try {
+		//
+		var transporter = nodemailer.createTransport({
+			service: 'gmail',
+			auth: {
+				user: 'voucheritp@gmail.com',
+				pass: 'CatalinITP',
+			},
+		});
+
+		var mailOptions = {
+			from: 'voucherITP@gmail.com',
+			to: 'donceabogdan97@gmail.com',
+			subject: 'Portofolio Email FROM',
+			text:
+				JSON.stringify(req.body.email) +
+				'\n' +
+				JSON.stringify(req.body.subject) +
+				'\n' +
+				JSON.stringify(req.body.message) +
+				'\n' +
+				JSON.stringify(req.body.date),
+		};
+
+		transporter.sendMail(mailOptions, function (error, info) {
+			if (error) {
+				console.log(error);
+			} else {
+				console.log('Email sent: ' + info.response);
+			}
+		});
+		//
 		const hire = await Model.create(req.body);
 		//console.log(req.body);
 		console.log(hire);
