@@ -18,6 +18,6 @@ mongoose
 		console.log('DB connection successful!');
 	});
 
-app.listen(port, () => {
+app.listen(process.env.port || port, () => {
 	console.log(`App running on port ${port}...`);
 });
